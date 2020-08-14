@@ -1,0 +1,14 @@
+# Use postgres/example user/password credentials
+version: '3.6'
+
+services:
+  postgresql:
+    container_name: postgresql
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+     - POSTGRES_PASSWORD=admin
+     - POSTGRES_USER=admin
+     - POSTGRES_DB=testdb
